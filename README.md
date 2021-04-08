@@ -3,7 +3,7 @@ README.md Outline
 # Predicting Heart Failure
 
 # <a name="top"></a>Finding Log Error for Zillow - README.md
-![Zillow Logo](https://github.com/Zillow-Project/zillow_project_2021/blob/main/Caitlyn/photos/Screen%20Shot%202021-04-01%20at%205.57.59%20PM.png?raw=true)
+![Video Games](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/Screen%20Shot%202021-04-08%20at%2012.58.36%20PM.png?raw=true)
 ​
 ***
 [[Project Description](#project_description)]
