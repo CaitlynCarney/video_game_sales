@@ -244,98 +244,69 @@ ___
 Summary of modeling choices...
 
 ### Baseline
-
-- Baseline Results: 
-    - Median In sample = 0.16
-    - Median Out of sample = 0.15
         
 ### Models and R<sup>2</sup> Values:
 - Will run the following models:
-    - Linear regression OLS Model
-    - Lasso Lars
-    - Tweedie Regressor
-    - Polynomail Degree 2
-    - Ploynomial Degree 3
+    - ???
 
 - Other indicators of model performance
     - R<sup>2</sup> Baseline Value
-        - -0.004585
+        - ?
     - R<sup>2</sup> OLS Value 
-        - 0.00005159
+        - ?
 
 
 
 ### RMSE using Mean
     
-Train/In-Sample:  0.16 
+Train/In-Sample:  ?
     
-Validate/Out-of-Sample:  0.15
+Validate/Out-of-Sample: ? 
     
 
 ### RMSE using Median
-Train/In-Sample:  0.16 
-Validate/Out-of-Sample:  0.15
+Train/In-Sample:  ?
+Validate/Out-of-Sample:  ?
 
-### RMSE for OLS using LinearRegression
+### Model
     
-Training/In-Sample:  0.15698193096987265 
+Training/In-Sample:  ?
     
-Validation/Out-of-Sample:  0.1518694361646674
+Validation/Out-of-Sample:  ?
     
 
-### RMSE for Lasso + Lars
+### Model
     
 Training/In-Sample:  0.012348907010552293 
     
 Validation/Out-of-Sample:  0.011532822479710627
     
 
-    
-### RMSE for GLM using Tweedie, power=0 and alpha=0
-    
-Training/In-Sample:  0.01234045919349956 
-    
-Validation/Out-of-Sample:  0.011536767590909373
-    
-
-    
-### RMSE for Polynomial Model, degrees=2
-    
-Training/In-Sample:  0.012288891953326782 
-    
-Validation/Out-of-Sample:  0.011543443686491118
-    
-
-    
-### RMSE for Polynomial Model, degrees=3
-    
-Training/In-Sample:  0.012288891953326782 
-    
-Validation/Out-of-Sample:  0.011543443686491118
-
-
 ### Eetc:
 
 ## Selecting the Best Model:
+
+- ??? 
 
 ### Use Table below as a template for all Modeling results for easy comparison:
 
 | Model | Training/In Sample RMSE | Validation/Out of Sample RMSE | R<sup>2</sup> Value |
 | ---- | ----| ---- | ---- |
-| Baseline | 0.16  | 0.15 | -0.004585 |
-| Linear Regression |  0.15698193096987265  | 0.1518694361646674 | 0.00005159 |
-| Tweedie Regressor (GLM) | 0.01234045919349956  | 0.011536767590909373 | n/a |
-| Lasso Lars | 0.012348907010552293  | 0.011532822479710627 | n/a |
-| Polynomial Regression D2| 0.012288891953326782  | 0.011543443686491118 | n/a |
-| Polynomial Regression D3| 0.012288891953326782  | 0.011543443686491118 | n/a |
+| Baseline Mean | in sample  | out sample | r square |
+| Baseline Median | in sample  | out sample | r square |
+| model |  in sample  | out sample | r square |
+| model |  in sample  | out sample | r square |
+| model |  in sample  | out sample | r square |
+| model |  in sample  | out sample | r square |
+| model |  in sample  | out sample | r square |
 
-- Why did you choose this model?
-    - It was closer to 0 than our baseline.
+- Why did I choose this model?
+    - ???
 
 ## Testing the Model
 
 - Model Testing Results
-     - Out-of-Sample Performance:  0.1518694361646674
+     - ???
 
 
 ***
@@ -347,19 +318,16 @@ Validation/Out-of-Sample:  0.011543443686491118
 <details>
   <summary>Click to expand!</summary>
 
-We found that only about 9.36% of log error was inaccurate. Meaning that it was below -0.15 or above 0.15 rendering it inaccurate.
+Initial Findings:
 
-This gave us a small amount to work with. But in the end we were able to create a model to find certain drivers of the inaccurate log error.
-Our model performed better than the baseline by a decent amount. With a R baseline of ~-0.0046 and our model performing at ~0.000052. Meaning we were able to get closer to 0 than our baseline.
+In the end:
 
-We found that Ventura, north downtown LA, tax values, home quality, and a homes age affect loerror within their resepective cluster.
+We found that:
 
-With further time we would like to look further into geographical location and tax values to see if there is a more specific reason for log error.
+With further time: 
 
-We recommend using our OLS model to be used within the field, in order to establish a closer zestimate score to what the selling price may be, in order to service our custoemrs even better.
+Recommend:
 
-
-    
 
 </details>  
 
