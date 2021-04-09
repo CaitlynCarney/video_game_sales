@@ -1,8 +1,8 @@
 README.md Outline
 
-# Predicting Heart Failure
+# Predicting Video Game Sales
 
-# <a name="top"></a>Finding Log Error for Zillow - README.md
+# <a name="top"></a>Finding Video Game Sales - README.md
 ![Video Games](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/Screen%20Shot%202021-04-08%20at%2012.58.36%20PM.png?raw=true)
 ​
 ***
@@ -112,11 +112,17 @@ ___
     
 | Attribute | Definition | Data Type |
 | ----- | ----- | ----- |
-| feature  |  description | astype |     
-| feature  |  description | astype |     
-| feature  |  description | astype | 
-| feature  |  description | astype |   
-| feature  |  description | astype |   
+| Rank  |  Ranking of overall sales | astype |     
+| Name  |  The games name | astype |     
+| Platform  |   Platform of the games release (i.e. PC,PS4, etc.) | astype | 
+| Year  | Year of the game's release | astype |   
+| Genre  |  Genre of the game | astype |   
+| Publisher  |  Publisher of the game | astype |  
+| NA_Sales  |  Sales in North America (in millions) | astype |  
+| EU_Sales  |  Sales in Europe (in millions) | astype |  
+| JP_Sales  |  Sales in Japan (in millions) | astype |  
+| Other_Sales  |  Sales in the rest of the world (in millions) | astype |  
+| Global_Sales  |  Total worldwide sales. | astype | 
     
 \*  Indicates the target feature in this Zillow data.
 
