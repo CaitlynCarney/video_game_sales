@@ -16,9 +16,10 @@ README.md Outline
 [[Modeling](#model)]
 [[Conclusion](#conclusion)]
 ___
-​
-​
-## <a name="project_description"></a>Project Description:
+
+
+## <a name="project_description"></a>
+![desc](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/project_desc.png?raw=true)
 [[Back to top](#top)]
 
 <details>
@@ -36,8 +37,10 @@ ___
 </details>
     
     
-## <a name="planning"></a>Project Planning: 
+## <a name="planning"></a>
+![plan](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/project_planning.png?raw=true)
 [[Back to top](#top)]
+
 <details>
   <summary>Click to expand!</summary>
 
@@ -69,7 +72,9 @@ ___
 </details>
 
     
-## <a name="findings"></a>Key Findings:
+## <a name="findings"></a>
+![find](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/key_findings.png?raw=true)
+
 [[Back to top](#top)]
 
 <details>
@@ -102,7 +107,9 @@ ___
     
 </details>
 
-## <a name="dictionary"></a>Data Dictionary  
+## <a name="dictionary"></a>
+![dict](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/data_dict.png?raw=true)
+
 [[Back to top](#top)]
 
 <details>
@@ -129,7 +136,8 @@ ___
 ***
 </details>
 
-## <a name="acquire_and_prep"></a>Acquire & Prep:
+## <a name="acquire_and_prep"></a>
+![acquire_prep](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/acquire_prep.png?raw=true)
 [[Back to top](#top)]
 
 <details>
@@ -152,7 +160,8 @@ ___
 
 
 
-## <a name="explore"></a>Data Exploration:
+## <a name="explore"></a>
+![dict](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/data_explore.png?raw=true)
 [[Back to top](#top)]
 
 <details>
@@ -173,7 +182,8 @@ ___
 ​
 </details>    
 
-## <a name="stats"></a>Statistical Analysis
+## <a name="stats"></a>
+![stats](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/stats.png?raw=true)
 [[Back to top](#top)]
 <details>
   <summary>Click to expand!</summary>
@@ -242,7 +252,8 @@ ___
     
 </details>    
 
-## <a name="model"></a>Modeling:
+## <a name="model"></a>
+![model](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/model.png?raw=true)
 [[Back to top](#top)]
 <details>
   <summary>Click to expand!</summary>
@@ -319,7 +330,8 @@ Validation/Out-of-Sample:  0.011532822479710627
 
 </details>  
 
-## <a name="conclusion"></a>Conclusion:
+## <a name="conclusion"></a>
+![conclusion](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/conclusion.png?raw=true)
 [[Back to top](#top)]
 <details>
   <summary>Click to expand!</summary>
@@ -337,7 +349,7 @@ Recommend:
 
 </details>  
 
-![Folder Contents](https://github.com/Zillow-Project/zillow_project_2021/blob/main/Caitlyn/photos/ScreenShot2021-04-06at12.52.26PM.png?raw=true)
+![Folder Contents](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/file_pathing.png?raw=true)
 
 
 >>>>>>>>>>>>>>>
