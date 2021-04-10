@@ -59,12 +59,9 @@ def clean_game_sales(df):
                                           "00's-05", '05-10', '10-15', '15-20'])
     # bin the year column to help exploration
     df['sales_binned'] = pd.cut(df.Global_Sales, 
-                            bins = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,10,100],
-                            labels = ['100k', '100k-200k', '200k-300k', 
-                                      '300k-400k', '400k-500k', '500k-600k',
-                                      '600k-700k', '700k-800k', '800k-900k', 
-                                      '900-1 Million', '1 Mil - 10 Mil', 
-                                      'Over 10 Million'])
+                        bins = [0,0.1,0.5,0.9,100],
+                        labels = ['Moderate Success', 'Fairly Successful', 'Very Successful', 
+                                  'Extremely Successful'])
     # Sony
     df['Platform'] = df.Platform.replace('PS2','Playstation Platform')
     df['Platform'] = df.Platform.replace('PS3','Playstation Platform')
