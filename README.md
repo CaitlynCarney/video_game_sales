@@ -1,10 +1,6 @@
-README.md Outline
+<a name="top"></a>
+![Video Games](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/custom_header.png?raw=true)
 
-# Predicting Video Game Sales
-
-# <a name="top"></a>Finding Video Game Sales - README.md
-![Video Games](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/Screen%20Shot%202021-04-08%20at%2012.58.36%20PM.png?raw=true)
-​
 ***
 [[Project Description](#project_description)]
 [[Project Planning](#planning)]
