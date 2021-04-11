@@ -58,48 +58,48 @@ def clean_game_sales(df):
                                 labels = ['80-85', '85-90', '90-95', "95-00's", 
                                           "00's-05", '05-10', '10-15', '15-20'])
     # bin the year column to help exploration
-    df['sales_binned'] = pd.cut(df.Global_Sales, 
+    df['level_of_success'] = pd.cut(df.Global_Sales, 
                         bins = [0,0.1,0.5,0.9,100],
                         labels = ['Moderate Success', 'Fairly Successful', 'Very Successful', 
                                   'Extremely Successful'])
     # Sony
-    df['Platform'] = df.Platform.replace('PS2','Playstation Platform')
-    df['Platform'] = df.Platform.replace('PS3','Playstation Platform')
-    df['Platform'] = df.Platform.replace('PSP','Playstation Platform')
-    df['Platform'] = df.Platform.replace('PS','Playstation Platform')
-    df['Platform'] = df.Platform.replace('PS4','Playstation Platform')
+    df['Platform'] = df.Platform.replace('PS2','Playstation')
+    df['Platform'] = df.Platform.replace('PS3','Playstation')
+    df['Platform'] = df.Platform.replace('PSP','Playstation')
+    df['Platform'] = df.Platform.replace('PS','Playstation')
+    df['Platform'] = df.Platform.replace('PS4','Playstation')
     # Xbox
-    df['Platform'] = df.Platform.replace('X360','Xbox Platform')
-    df['Platform'] = df.Platform.replace('XB','Xbox Platform')
-    df['Platform'] = df.Platform.replace('XOne','Xbox Platform')
+    df['Platform'] = df.Platform.replace('X360','Xbox')
+    df['Platform'] = df.Platform.replace('XB','Xbox')
+    df['Platform'] = df.Platform.replace('XOne','Xbox')
     # Nintendo
-    df['Platform'] = df.Platform.replace('DS','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('Wii','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('GB','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('GC','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('3DS','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('SNES','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('WiiU','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('NES','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('Gameboy','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('N64','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('SCD','Nintendo Platform')
-    df['Platform'] = df.Platform.replace('GBA','Nintendo Platform')
+    df['Platform'] = df.Platform.replace('DS','Nintendo')
+    df['Platform'] = df.Platform.replace('Wii','Nintendo')
+    df['Platform'] = df.Platform.replace('GB','Nintendo')
+    df['Platform'] = df.Platform.replace('GC','Nintendo')
+    df['Platform'] = df.Platform.replace('3DS','Nintendo')
+    df['Platform'] = df.Platform.replace('SNES','Nintendo')
+    df['Platform'] = df.Platform.replace('WiiU','Nintendo')
+    df['Platform'] = df.Platform.replace('NES','Nintendo')
+    df['Platform'] = df.Platform.replace('Gameboy','Nintendo')
+    df['Platform'] = df.Platform.replace('N64','Nintendo')
+    df['Platform'] = df.Platform.replace('SCD','Nintendo')
+    df['Platform'] = df.Platform.replace('GBA','Nintendo')
     # Computer
-    df['Platform'] = df.Platform.replace('PC','Computer Platform')
-    df['Platform'] = df.Platform.replace('PSV','Computer Platform')
+    df['Platform'] = df.Platform.replace('PC','Computer')
+    df['Platform'] = df.Platform.replace('PSV','Computer')
     # Sega
-    df['Platform'] = df.Platform.replace('SAT','Sega Platform')
-    df['Platform'] = df.Platform.replace('DC','Sega Platform')
-    df['Platform'] = df.Platform.replace('GEN','Sega Platform')
-    df['Platform'] = df.Platform.replace('GG','Sega Platform')
+    df['Platform'] = df.Platform.replace('SAT','Sega')
+    df['Platform'] = df.Platform.replace('DC','Sega')
+    df['Platform'] = df.Platform.replace('GEN','Sega')
+    df['Platform'] = df.Platform.replace('GG','Sega')
     # Other
-    df['Platform'] = df.Platform.replace(2600,'Other Platform')
-    df['Platform'] = df.Platform.replace('NG','Other Platform')
-    df['Platform'] = df.Platform.replace('WS','Other Platform')
-    df['Platform'] = df.Platform.replace('3DO','Other Platform')
-    df['Platform'] = df.Platform.replace('TG16','Other Platform')
-    df['Platform'] = df.Platform.replace('PCFX','Other Platform')
+    df['Platform'] = df.Platform.replace(2600,'Other')
+    df['Platform'] = df.Platform.replace('NG','Other')
+    df['Platform'] = df.Platform.replace('WS','Other')
+    df['Platform'] = df.Platform.replace('3DO','Other')
+    df['Platform'] = df.Platform.replace('TG16','Other')
+    df['Platform'] = df.Platform.replace('PCFX','Other')
     # replace genres
     df['Genre'] = df.Genre.replace('Puzzle','Strategy')
     df['Genre'] = df.Genre.replace('Action','Action_Adventure')
@@ -118,8 +118,20 @@ def clean_game_sales(df):
                         'Misc', 'Role_Playing', 'Shooter', 
                         'Strategy', 'Platform']
     df = pd.concat([df, dummy_df], axis=1)
+    # create dummy variables for success level
+    dummy_df =  pd.get_dummies(df['level_of_success'])
+    dummy_df.columns = ['Moderate_Success', 'Fairly_Successful', 'Very_Successful', 
+                                  'Extremely_Successful']
+    df = pd.concat([df, dummy_df], axis=1)
+    # Rename columns
+    df.columns = ['Platform','Year', 'Genre', 'Publisher', 'Global_Sales', 'years_binned', 
+              'level_of_success', 'Nintendo', 'Playstation' ,'Xbox', 'Computer', 
+              'Sega', 'Other', 'Action_Adventure', 'Simulation', 'Sports', 
+              'Misc', 'Role_Playing', 'Shooter', 'Strategy', 'Plat', 
+              'Moderate_Success', 'Fairly_Successful', 'Very_Successful', 
+              'Extremely_Successful']
     #drop features
-    df = df.drop(['Publisher', 'Platform'], axis=1)
+    df = df.drop(['Plat'], axis=1)
     return df
 
 #-----------------------------------------------------------------------------
