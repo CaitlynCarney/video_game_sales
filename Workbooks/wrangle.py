@@ -155,12 +155,12 @@ def split_train_validate_test(train, validate, test):
     ''' This function takes in train, validate and test
     splits them into X and y versions
     returns X_train, X_validate, X_test, y_train, y_validate, y_test'''
-    X_train = train.drop(columns = ['Global_Sales'])
-    y_train = pd.DataFrame(train.Global_Sales)
-    X_validate = validate.drop(columns=['Global_Sales'])
-    y_validate = pd.DataFrame(validate.Global_Sales)
-    X_test = test.drop(columns=['Global_Sales'])
-    y_test = pd.DataFrame(test.Global_Sales)
+    X_train = train.drop(columns = ['level_of_success'])
+    y_train = pd.DataFrame(train.level_of_success)
+    X_validate = validate.drop(columns=['level_of_success'])
+    y_validate = pd.DataFrame(validate.level_of_success)
+    X_test = test.drop(columns=['level_of_success'])
+    y_test = pd.DataFrame(test.level_of_success)
     return X_train, X_validate, X_test, y_train, y_validate, y_test
 
 #-----------------------------------------------------------------------------
@@ -181,3 +181,47 @@ def scale_my_data(train, validate, test):
     test_scaled = pd.DataFrame(test_scaled)
     
     return train_scaled, validate_scaled, test_scaled
+
+#-----------------------------------------------------------------------------
+
+# Focused Data
+
+def focused_game_sales(df):
+    '''
+    takes in train
+    sets sepecific features to focus on
+    returns a focused data frame in a pandas dataframe
+    '''
+    # choose features to focus on
+    features = [
+    'Year','level_of_success',
+    'Nintendo','Playstation','Xbox','Computer','Sega','Other',
+    'Action_Adventure', 'Simulation', 'Sports', 'Misc', 'Role_Playing', 'Shooter',
+    'Strategy'] 
+    # the target is level of success
+    # return a df based only on these features
+    df2 = df[features]
+    return df2
+
+def split_focused_game_sales(df2):
+    '''This fuction takes in a df 
+    splits into train, test, validate
+    return: three pandas dataframes: train, validate, test
+    '''
+    # split the focused zillow data
+    train_validate2, test2 = train_test_split(df2, test_size=.2, random_state=1234)
+    train2, validate2 = train_test_split(train_validate2, test_size=.3, 
+                                       random_state=1234)
+    return train2, validate2, test2
+
+def split_train2_validate2_test2(train2, validate2, test2):
+    ''' This function takes in train, validate and test
+    splits them into X and y versions
+    returns X_train, X_validate, X_test, y_train, y_validate, y_test'''
+    X_train = train.drop(columns = ['level_of_success'])
+    y_train = pd.DataFrame(train.level_of_success)
+    X_validate = validate.drop(columns=['level_of_success'])
+    y_validate = pd.DataFrame(validate.level_of_success)
+    X_test = test.drop(columns=['level_of_success'])
+    y_test = pd.DataFrame(test.level_of_success)
+    return X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2
