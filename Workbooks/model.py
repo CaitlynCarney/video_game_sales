@@ -26,6 +26,8 @@ from sklearn.linear_model import LogisticRegression
     #import to be able to do logistic regression
 from sklearn.ensemble import RandomForestClassifier
     #import to be able to do random forest
+from sklearn.linear_model import RidgeClassifier
+from sklearn.linear_model import SGDClassifier
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 df = wrangle.acquire_game_sales()
 df = wrangle.clean_game_sales(df)
@@ -162,6 +164,13 @@ def all_models(X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2):
     y_pred = rf.predict(X_train2)
     # estimate probability
     y_pred_proba = rf.predict_proba(X_train2)
+    # ridge
+    # create the model object
+    clf2 = RidgeClassifier(random_state=123)
+    # fit to train only
+    clf2.fit(X_train2, y_train2)
+    y_pred = clf2.predict(X_train2)
+    # evaluate with score, returns the mean accuracy on the given test data and labels
     print(f'The Baseline Accuracy is: \n', round(baseline_accuracy, 4))
     print("________________________________________________")
     print('Accuracy of Logit 1 Model on Train: \n', round(logit1.score(X_train2, y_train2),4))
@@ -171,3 +180,67 @@ def all_models(X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2):
     print('Accuracy of KNN Model on Train: \n',round(knn.score(X_train2, y_train2),4))
     print("________________________________________________")
     print('Accuracy of Random Forest Classifier on Train: \n', round(rf.score(X_train2, y_train2),4))
+    print("________________________________________________")    
+    print('Accuracy of Ridge Classifier Model on Train: \n', round(clf2.score(X_train2, y_train2),4))
+    
+def ridge_class_model(X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2):
+    '''Creates a ridge classifier model
+    shows it accuracy on train, validate and test'''
+    # create the model object
+    clf2 = RidgeClassifier(random_state=123)
+    # fit to train only
+    clf2.fit(X_train2, y_train2)
+    y_pred = clf2.predict(X_train2)
+    # evaluate with score, returns the mean accuracy on the given test data and labels
+    print('Accuracy of Ridge Classifier Model on Train: \n', round(clf2.score(X_train2, y_train2),4))
+    print('Accuracy of Ridge Classifier Model on Validate: \n', round(clf2.score(X_validate2, y_validate2),4))
+    print('Accuracy of Ridge Classifier Model on Test: \n', round(clf2.score(X_train2, y_train2),4))
+    
+def rf_importance(X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2):
+    '''plots the level of importance for each feature in the rf model'''
+    # set it
+    rf = RandomForestClassifier(bootstrap=True, 
+                            class_weight=None, 
+                            criterion='gini',
+                            min_samples_leaf=3,
+                            n_estimators=100,
+                            max_depth=3, 
+                            random_state=123)
+    # fit it
+    rf.fit(X_train2, y_train2)
+    # make predictions
+    y_pred = rf.predict(X_train2)
+    # estimate probability
+    y_pred_proba = rf.predict_proba(X_train2)
+    #set importance
+    rf_feature_imp = rf.feature_importances_
+    # make plot
+    fig, ax = plt.subplots(figsize=(13,9)) 
+    width = .75 # the width of the bars 
+    ind = np.arange(len(rf_feature_imp)) # the x locations for the groups
+    plt.barh(ind, rf_feature_imp, width, color="maroon", edgecolor='black')
+    ax.set_yticks(ind+width/10)
+    ax.set_yticklabels(X_train2, minor=False)
+    plt.title('Feature Importance in RandomForest Classifier', size=15)
+    plt.xlabel('Relative importance', size=15)
+    plt.ylabel('Feature', size=15)
+    
+def dc_importance(X_train2, X_validate2, X_test2, y_train2, y_validate2, y_test2):
+    '''plots the level of importance for each feature in the dc model'''
+    # create the model
+    clf = DecisionTreeClassifier(max_depth=5, random_state=123)
+    # fit to train
+    clf.fit(X_train2, y_train2)
+    col = X_train2.columns
+    #modelname.feature_importance_
+    dc_importances = clf.feature_importances_
+    #plot
+    fig, ax = plt.subplots(figsize=(13,9)) 
+    width = .75 # the width of the bars 
+    ind = np.arange(len(dc_importances)) # the x locations for the groups
+    plt.barh(ind, dc_importances, width, color="maroon", edgecolor='black')
+    ax.set_yticks(ind+width/10)
+    ax.set_yticklabels(col, minor=False)
+    plt.title('Feature importance in DecisionTree Classifier', size=15)
+    plt.xlabel('Relative importance')
+    plt.ylabel('feature')
