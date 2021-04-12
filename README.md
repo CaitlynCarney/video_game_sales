@@ -461,6 +461,7 @@ Summary of modeling choices...
     - KNN
     - Decision Tree
     - Random Forest
+    - Ridge Classifier
 - Other indicators of model performance
     - Baseline
 
@@ -485,14 +486,17 @@ Model Accuracy:  0.4339
 ### Random Forest Model
 Model Accuracy:  0.4486
     
+### Ridge Classifier
+Model Accuracy: 0.4546
+    
 
 ## Selecting the Best Model:
 
-- Decision Tree
+- Ridge Classifier
     - The Baseline Accuracy is: 0.3938
-    - Accuracy of Decison Tree Model on Train: 0.0.4339
-    - Accuracy of Decision Tree Model on Validate: 0.4269
-    - Accuracy of Decision Tree Model on Test: 00.4339
+    - Accuracy of Ridge Classifier Model on Train: 0.4546
+    - Accuracy of Ridge Classifier Model on Validate: 0.445
+    - Accuracy of Ridge Classifier Model on Test: 0.4546
 
 ### Use Table below as a template for all Modeling results for easy comparison:
 
@@ -502,14 +506,16 @@ Model Accuracy:  0.4486
 | Decision Tree |  0.4339  | 0.4269 | 0.4339 |
 | KNN |  0.4696  | 0.4167 | 0.4133 |
 | Random Forest |  0.4486  | 0.4412 | 0.432 |
+| Ridge Cclassifier |  0.4546  | 0.445 | 0.4546 |
 
 - Why did I choose this model?
-    - In the accuracy was the best in the testing.
+    - I originally went with the KNN model because of its performance in the train data however it under performed compared to all other in the test data.
+        - Form here I ran the others as well and fount that the Ridge Classifier model was the one that performed well in all 3 tests.
 
 ## Testing the Model
 
 - Model Testing Results
-     - 0.0.4339
+     - 0.4546
 
 
 ***
@@ -538,7 +544,7 @@ I found that genre, year, and platform have an effect on the level of success a 
 
 With further time I would like to see about getting further data maybe including critic scores, developer, if the game is online or not, multiplayer or solo, and possibly the amount of time the game was in development.
 
-I recommend utalizing the KNN model to help give insight to a games possible level of success within the industry.
+I recommend utalizing the Ridge Classifier model to help give insight to a games possible level of success within the industry.
 
 
 </details>  
