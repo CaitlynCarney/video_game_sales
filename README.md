@@ -36,9 +36,8 @@ ___
     - There are 16,598 records. 2 records were dropped due to incomplete information.
 
 Project Name: Video Game Success Prediction
- 
-The "Video Game Success Prediction" is a model that predicts the level of success a game may have. Features that were incorporated into the predictive model were game genre, platform, and year of release.
 
+I used a data set of video game sales which have sold 100 thousand copies or more. To discover if there is a way to predict the success level that a game may have, I explored and statistically tested what features influenced a the level of succes and found that genre, platform, and year were the 3 main drivers. I then created a ridge classifier model to predict a games succes based on these 3 drivers.
     
 
 </details>
