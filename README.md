@@ -35,6 +35,12 @@ ___
         - It is based on BeautifulSoup using Python.
     - There are 16,598 records. 2 records were dropped due to incomplete information.
 
+Project Name: Video Game Success Prediction
+ 
+The "Video Game Success Prediction" is a model that predicts the level of success a game may have. Features that were incorporated into the predictive model were game genre, platform, and year of release.
+
+    
+
 </details>
     
     
