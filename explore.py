@@ -48,7 +48,6 @@ def see_success_through_years(train):
     plt.subplot(2,2,4)
     plt.title("Extremely Successful Games Through the Years", size=20, color='black')
     sns.barplot(y='Extremely_Successful', x ='years_binned', data = train, palette='hot')
-see_success_through_years(train)
 
 def success_percent_per_platform(train):
     '''This funciton take in the train date
