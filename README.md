@@ -175,13 +175,13 @@ ___
         - Accuracy of Random Forest Classifier on Train: 
              - 0.4486
 - Best Model:
-    - KNN Model
+    - Decision Tree Model
 - Model testing:
-    - Accuracy of KNN Model on Validate: 
-         - 0.4167
+    - Accuracy of Decision Tree Model on Validate: 
+         - 0.4269
 - Performance:
-    - Accuracy of KNN Model on Test: 
-         - 0.4133
+    - Accuracy of Decision Tree Model on Test: 
+         - 0.4339
 
 ***
 
@@ -488,11 +488,11 @@ Model Accuracy:  0.4486
 
 ## Selecting the Best Model:
 
-- KNN Model
+- Decision Tree
     - The Baseline Accuracy is: 0.3938
-    - Accuracy of KNN Model on Train: 0.4696
-    - Accuracy of KNN Model on Validate: 0.4167
-    - Accuracy of KNN Model on Test: 0.4133
+    - Accuracy of Decison Tree Model on Train: 0.0.4339
+    - Accuracy of Decision Tree Model on Validate: 0.4269
+    - Accuracy of Decision Tree Model on Test: 00.4339
 
 ### Use Table below as a template for all Modeling results for easy comparison:
 
@@ -504,12 +504,12 @@ Model Accuracy:  0.4486
 | Random Forest |  0.4486  | 0.4412 | 0.432 |
 
 - Why did I choose this model?
-    - In the train accuracy it was the best. It did turn out going down when in test than the others but still beat the baseline.
+    - In the accuracy was the best in the testing.
 
 ## Testing the Model
 
 - Model Testing Results
-     - 0.4133
+     - 0.0.4339
 
 
 ***
@@ -536,7 +536,7 @@ In the end:
     
 I found that genre, year, and platform have an effect on the level of success a game would have. Although, it is not perfect, it does give us insight to how much success a game may have.
 
-With further time I would like to see about getting further data maybe including critic scores, developer, and possibly the amount of time the game was in development.
+With further time I would like to see about getting further data maybe including critic scores, developer, if the game is online or not, multiplayer or solo, and possibly the amount of time the game was in development.
 
 I recommend utalizing the KNN model to help give insight to a games possible level of success within the industry.
 
