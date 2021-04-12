@@ -11,6 +11,7 @@
 [[Statistical Analysis](#stats)]
 [[Modeling](#model)]
 [[Conclusion](#conclusion)]
+[[Recreate This Project](#recreate)]
 ___
 
 
@@ -37,7 +38,7 @@ ___
 
 Project Name: Video Game Success Prediction
 
-I used a data set of video game sales which have sold 100 thousand copies or more. To discover if there is a way to predict the success level that a game may have, I explored and statistically tested what features influenced a the level of succes and found that genre, platform, and year were the 3 main drivers. I then created a ridge classifier model to predict a games succes based on these 3 drivers.
+I used a data set of video game sales which have sold 100 thousand copies or more. To discover if there is a way to predict the success level that a game may have, I explored and statistically tested what features influenced a the level of success and found that genre, platform, and year were the 3 main drivers. I then created a ridge classifier model to predict a games success based on these 3 drivers.
     
 
 </details>
@@ -553,6 +554,48 @@ I recommend utalizing the Ridge Classifier model to help give insight to a games
 
 
 </details>  
+
+
+## <a name="Recreate This Project"></a>
+![recreate](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/recreate_this.png?raw=true)
+[[Back to top](#top)]
+
+<details>
+  <summary>Click to expand!</summary>
+
+### 1. Getting started
+
+- First you will need to download the data set [here](https://www.kaggle.com/gregorut/videogamesales?select=vgsales.csv).
+- Next find your downloaded zip file and unzip.
+- Make a new repo on GitHub to hold the project, and clone it into your terminal by copying the SSH link.
+- Create a .gitignore that includes any files you dont want shared on the internet and push it!
+    - checkpoints
+    - csv's
+    - pychache
+    - etc.
+
+### 2. Moving into workbooks
+- Transfer your unzipped .csv files into your newly established folder.
+- Create a environment to continue working in.
+    - Jupyter lab (I used this)
+    - Jupyter Notbook
+    - Visual Studios
+    - What ever you prefer
+- Create notebook to begin to move through the data pipeline.
+    - plan
+    - acquire
+    - prepare
+    - explore
+    - model
+    - evaluate
+    
+Good luck I hope you enjoy your project!
+
+</details>
+    
+
+
+## 
 
 ![Folder Contents](https://github.com/CaitlynCarney/Video_Game_Sales/blob/master/Workbooks/photos/file_pathing.png?raw=true)
 
